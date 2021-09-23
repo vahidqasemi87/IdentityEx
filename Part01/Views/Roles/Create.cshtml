@@ -1,0 +1,25 @@
+﻿@model CreateRoleViewModel
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<div class="card">
+    <div class="card-header bg-success text-center">
+        <h4>اضافه کردن نقش</h4>
+    </div>
+    <div class="card-body">
+        <form method="post">
+            <div class="input-group">
+                <div class="input-group-prepend">
+                    <button class="btn btn-success">ذخیره</button>
+                </div>
+                <input type="text" asp-for="RoleName" class="form-control" />
+                <div class="input-group-prepend">
+                    <span class="input-group-text">نقش</span>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

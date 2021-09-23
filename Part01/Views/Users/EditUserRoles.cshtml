@@ -1,0 +1,19 @@
+﻿@model EditUserRolesViewModel
+@{
+    ViewData["Title"] = "EditUserRoles";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Username : @Model.Username</h1>
+<form method="post">
+    <input type="text" hidden asp-for="UserId" />
+    @foreach (var item in Model.Roles)
+    {
+        <div class="form-group">
+            <input type="checkbox" value="@item.Name" name="roles" checked="@Model.UserRoles.Any(c=>item.Name == c)" />
+            @item.Name
+        </div>
+    }
+    <button class="btn btn-outline-success" type="submit">ذخیره</button>
+</form>
+

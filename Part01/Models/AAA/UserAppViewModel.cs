@@ -14,5 +14,9 @@ namespace Part01.Models.AAA
         [Display(Name = "رمز عبور")]
         [Required(ErrorMessage = "{0} اجباری می باشد")]
         public string Password { get; set; }
+        [Display(Name = "کد ملی")]
+        [Required(ErrorMessage = "{0} اجباری می باشد")]
+        public string SNN { get; set; }
+
     }
 }

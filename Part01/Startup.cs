@@ -39,11 +39,12 @@ namespace Part01
                 options.Password.RequireLowercase = false;
                 options.Password.RequireNonAlphanumeric = false;
                 options.Password.RequireUppercase = false;
-
+                options.User.RequireUniqueEmail = true;
             }).AddEntityFrameworkStores<AAADbContext>();
             services.AddTransient<IPasswordValidator<UserApp>, BlackListItemValidator>();
             services.AddTransient<IPasswordValidator<UserApp>, EmailNotInPasswordValidator>();
             //services.AddTransient<IPasswordValidator<UserApp>, BlackListValidator>();
+            services.AddTransient<IUserValidator<UserApp>, CustomeUserValidator>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
