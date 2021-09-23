@@ -1,0 +1,35 @@
+﻿@model UserAppViewModel
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="card">
+    <form method="post" asp-action="Create">
+        <div class="card-header">
+            <h4>اضافه کردن کاربر</h4>
+        </div>
+        <div class="card-body">
+
+            <div class="text-danger" asp-validation-summary="All"></div>
+            <br />
+            <div class="form-group">
+                <label asp-for="Username"></label>
+                <input type="text" class="form-control" asp-for="Username" />
+                <span class="text-danger" asp-validation-for="Username"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Email"></label>
+                <input type="text" class="form-control" asp-for="Email" />
+                <span class="text-danger" asp-validation-for="Email"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Password"></label>
+                <input type="text" class="form-control" asp-for="Password" />
+                <span class="text-danger" asp-validation-for="Password"></span>
+            </div>
+        </div>
+        <div class="card-footer">
+            <button class="btn btn-success">ذخیره</button>
+        </div>
+    </form>
+</div>
