@@ -41,10 +41,10 @@ namespace Part01
                 options.Password.RequireUppercase = false;
                 options.User.RequireUniqueEmail = true;
             }).AddEntityFrameworkStores<AAADbContext>();
-            services.AddTransient<IPasswordValidator<UserApp>, BlackListItemValidator>();
-            services.AddTransient<IPasswordValidator<UserApp>, EmailNotInPasswordValidator>();
+            //services.AddTransient<IPasswordValidator<UserApp>, BlackListItemValidator>();
+            //services.AddTransient<IPasswordValidator<UserApp>, EmailNotInPasswordValidator>();
             //services.AddTransient<IPasswordValidator<UserApp>, BlackListValidator>();
-            services.AddTransient<IUserValidator<UserApp>, CustomeUserValidator>();
+            //services.AddTransient<IUserValidator<UserApp>, CustomeUserValidator>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -64,9 +64,11 @@ namespace Part01
             app.UseStaticFiles();
 
             app.UseRouting();
-
-            app.UseAuthorization();
+            //---------------------
             app.UseAuthentication();
+            //---------------------  
+            app.UseAuthorization();
+
 
             app.UseEndpoints(endpoints =>
             {

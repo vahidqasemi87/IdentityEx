@@ -154,3 +154,4 @@ D:\pro\Temp\New\14000701\Examples\Part01\obj\Debug\net5.0\Razor\Views\Users\Crea
 D:\pro\Temp\New\14000701\Examples\Part01\obj\Debug\net5.0\Razor\Views\Roles\Index.cshtml.g.cs
 D:\pro\Temp\New\14000701\Examples\Part01\obj\Debug\net5.0\Razor\Views\Roles\Create.cshtml.g.cs
 D:\pro\Temp\New\14000701\Examples\Part01\obj\Debug\net5.0\Razor\Views\Users\EditUserRoles.cshtml.g.cs
+D:\pro\Temp\New\14000701\Examples\Part01\obj\Debug\net5.0\Razor\Views\Account\Login.cshtml.g.cs
